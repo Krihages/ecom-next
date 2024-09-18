@@ -2,7 +2,7 @@ import Section from "@/components/Section";
 import fetchProducts from "@/lib/fetchProducts";
 import ProductImg from "./ProductImg";
 import ProductDetails from "./ProductDetails";
-import ProductReviews from "@/components/ProductReviews.tsx";
+import ProductReviews from "@/components/ProductReviews";
 
 export default async function Product({ id }: { id: string }) {
   const product = await fetchProducts(id);
