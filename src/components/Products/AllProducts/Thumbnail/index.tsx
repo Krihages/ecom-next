@@ -14,7 +14,7 @@ import StarRating from "@/components/StarRating";
 
 export default function Thumbnail({ product }: { product: Product }) {
   return (
-    <Card>
+    <Card className="hover:shadow-xl  bg-card hover:bg-background duration-500">
       <Link href={`/product/${product.id}`}>
         <ThumbnailImg image={product.image} />
         <CardHeader>
