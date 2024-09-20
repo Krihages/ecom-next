@@ -12,7 +12,7 @@ export default function Home({
   const searchQuery = searchParams.q;
   return (
     <Section>
-      <div className="flex justify-between items-center py-8 ">
+      <div className="flex flex-col lg:flex-row gap-6  justify-between items-center py-8 ">
         <h1 className="text-2xl font-bold uppercase">Products</h1>
         <SearchProducts />
       </div>

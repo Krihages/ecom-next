@@ -33,13 +33,13 @@ export default function SearchProducts() {
   };
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center w-full  lg:max-w-xl ">
       <input
         type="text"
         value={search}
         onChange={handleChange}
         placeholder="Search products.."
-        className="w-full border border-gray-300 rounded-md p-2 max-w-sm"
+        className="w-full border border-gray-300 rounded-md p-2 "
       />
     </div>
   );
