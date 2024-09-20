@@ -14,12 +14,16 @@ export default function CheckoutProducts() {
   if (!cartContext) return null;
 
   const { cart } = cartContext;
-  const total = cart.reduce((acc, product) => {
-    return acc + product.item.price * product.quantity;
-  }, 0);
+  const total = Number(
+    cart
+      .reduce((acc, product) => {
+        return acc + product.item.price * product.quantity;
+      }, 0)
+      .toFixed(2)
+  );
   return (
-    <div className="flex flex-col gap-4 xl:flex-row justify-center items-center xl:justify-between w-full">
-      <div className="flex flex-col items-center xl:items-start gap-4 flex-1 w-full">
+    <div className="flex flex-col gap-4  justify-center items-center w-full">
+      <div className="flex flex-col items-center  gap-4 flex-1 w-full">
         {cart.map((product) => (
           <Card
             key={product.item.id}
@@ -62,7 +66,7 @@ export default function CheckoutProducts() {
           </Card>
         ))}
       </div>
-      <div className="flex-1 w-full xl:self-end max-w-xl ">
+      <div className="flex-1 w-full  max-w-xl ">
         <TotalAndPay total={total} />
       </div>
     </div>
