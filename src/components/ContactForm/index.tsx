@@ -49,13 +49,13 @@ export default function ContactForm() {
 
   async function onSubmit(data: z.infer<typeof schema>) {
     setIsPending(true);
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+
     console.log(data);
     if (data) {
       toast({
         variant: "success",
         title: "Message sent",
-        description: "We will reply to you as soon as possible.",
+        description: "Vi vil svare deg så snart som mulig.",
       });
       // Empties the title and message but keeps the name and email
       form.reset({

@@ -7,7 +7,6 @@ import ProductReviews from "@/components/ProductReviews";
 export default async function Product({ id }: { id: string }) {
   const product = await fetchProducts(id);
   console.log(product);
-  await new Promise((resolve) => setTimeout(resolve, 3000));
 
   return (
     <>
