@@ -1,3 +1,4 @@
+import Favorites from "../Favorites";
 import { ModeToggle } from "../Providers/ThemeProvider/ModeToggle";
 import Cart from "./Cart";
 
@@ -14,6 +15,7 @@ export default function Header() {
           <div className="flex  items-center gap-2">
             <Cart />
             <ModeToggle />
+            <Favorites />
           </div>
         </div>
       </div>

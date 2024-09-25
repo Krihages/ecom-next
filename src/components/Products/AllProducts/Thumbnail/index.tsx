@@ -16,7 +16,7 @@ export default function Thumbnail({ product }: { product: Product }) {
   return (
     <Card className="hover:shadow-xl  bg-card hover:bg-background duration-500">
       <Link href={`/product/${product.id}`}>
-        <ThumbnailImg image={product.image} />
+        <ThumbnailImg product={product} />
         <CardHeader>
           <CardTitle>{product.title}</CardTitle>
 

@@ -1,5 +1,6 @@
 import ThemeProvider from "./ThemeProvider";
 import CartProvider from "./CartProvider";
+import { FavoritesProvider } from "./Favorites";
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   return (
@@ -9,7 +10,9 @@ export default function Providers({ children }: { children: React.ReactNode }) {
       enableSystem
       disableTransitionOnChange
     >
-      <CartProvider>{children}</CartProvider>
+      <CartProvider>
+        <FavoritesProvider>{children}</FavoritesProvider>
+      </CartProvider>
     </ThemeProvider>
   );
 }

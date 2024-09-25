@@ -4,6 +4,7 @@ import { Product } from "@/types/Product";
 
 export default async function AllProducts({ query }: { query: string }) {
   const products = await fetchProducts();
+
   let filteredProducts = products;
   if (query && query.length > 0) {
     filteredProducts = products.filter((product: Product) =>
