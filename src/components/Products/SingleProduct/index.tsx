@@ -12,13 +12,13 @@ export default async function Product({ id }: { id: string }) {
     <>
       <Section>
         <div className="flex flex-col lg:flex-row ">
-          <div className="flex-1">
+          <div className="flex-1 max-w-[600px] w-full  mx-auto lg:max-w-full">
             <ProductImg
               image={product.image}
               onSale={product.price - product.discountedPrice}
             />
           </div>
-          <div className="flex-1">
+          <div className="flex-1 max-w-[600px] w-full   mx-auto lg:max-w-full">
             <ProductDetails product={product} />
           </div>
         </div>
