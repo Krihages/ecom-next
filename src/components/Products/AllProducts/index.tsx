@@ -2,8 +2,14 @@ import fetchProducts from "@/lib/fetchProducts";
 import Thumbnail from "./Thumbnail";
 import { Product } from "@/types/Product";
 
+import ErrorFetch from "@/components/ErrorFetch";
+
 export default async function AllProducts({ query }: { query: string }) {
-  const products = await fetchProducts();
+  const [products, error] = await fetchProducts();
+
+  if (error) {
+    return <ErrorFetch error={error} />;
+  }
 
   let filteredProducts = products;
   if (query && query.length > 0) {

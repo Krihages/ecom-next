@@ -9,7 +9,6 @@ import Link from "next/link";
 export default function FavoritesPage() {
   const { favorites } = useFavorites();
 
-  console.log(favorites);
   return (
     <Section>
       <h1 className="text-2xl font-bold">Your favorites</h1>

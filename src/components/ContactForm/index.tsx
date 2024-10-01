@@ -50,7 +50,6 @@ export default function ContactForm() {
   async function onSubmit(data: z.infer<typeof schema>) {
     setIsPending(true);
 
-    console.log(data);
     if (data) {
       toast({
         variant: "success",

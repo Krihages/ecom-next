@@ -3,10 +3,14 @@ import fetchProducts from "@/lib/fetchProducts";
 import ProductImg from "./ProductImg";
 import ProductDetails from "./ProductDetails";
 import ProductReviews from "@/components/ProductReviews";
+import ErrorFetch from "@/components/ErrorFetch";
 
 export default async function Product({ id }: { id: string }) {
-  const product = await fetchProducts(id);
-  console.log(product);
+  const [product, error] = await fetchProducts(id);
+
+  if (error) {
+    return <ErrorFetch error={error} />;
+  }
 
   return (
     <>

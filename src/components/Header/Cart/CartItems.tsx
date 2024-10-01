@@ -13,7 +13,6 @@ export default function CartItems() {
   function handleIncrement(id: string) {
     const product = cart.find((product) => product.item.id === id);
     if (product) {
-      console.log("product", product);
       const updatedProduct = {
         item: product.item,
         quantity: 1,

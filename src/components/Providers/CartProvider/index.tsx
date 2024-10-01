@@ -40,8 +40,6 @@ export default function CartProvider({
     }
   }, [cart]);
 
-  console.log(cart);
-
   const addToCart = (item: CartItem) => {
     const existingItem = cart.find(
       (product) => product.item.id === item.item.id

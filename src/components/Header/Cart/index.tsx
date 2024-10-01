@@ -18,7 +18,7 @@ export default function Cart() {
 
   if (!cartContext) return null;
   const { cart } = cartContext;
-  console.log(cart);
+
   return (
     <Popover>
       <PopoverTrigger className="bg-background rounded-md border p-[7px] hover:bg-accent duration-200">
