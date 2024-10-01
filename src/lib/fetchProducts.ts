@@ -2,8 +2,13 @@ export default async function fetchProducts(
   id: string = "",
   url: string = "https://v2.api.noroff.dev/online-shop/"
 ) {
-  const res = await fetch(`${url}${id}`);
-  const data = await res.json();
+  try {
+    const res = await fetch(`${url}${id}`);
+    const data = await res.json();
 
-  return data.data;
+    return [data.data, null];
+  } catch (error) {
+    console.error(error);
+    return [null, error];
+  }
 }
