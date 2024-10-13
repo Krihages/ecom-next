@@ -26,9 +26,10 @@ export default function Thumbnail({ product }: { product: Product }) {
           />
           <StarRating rating={product.rating} size={16} />
         </CardHeader>
+
         <CardContent>
           <CardDescription>
-            {product.description.slice(0, 40)}...
+            {product.description.slice(0, 50)}...
           </CardDescription>
         </CardContent>
       </Link>

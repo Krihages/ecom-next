@@ -1,6 +1,6 @@
 export default async function fetchProducts(
   id: string = "",
-  url: string = "https://v2.api.noroff.dev/online-shop/"
+  url: string = process.env.API_URL as string
 ) {
   try {
     const res = await fetch(`${url}${id}`);

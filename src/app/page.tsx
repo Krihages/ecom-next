@@ -4,6 +4,10 @@ import { Suspense } from "react";
 import SearchProducts from "@/components/SearchProducts";
 import Section from "@/components/Section";
 
+export const metadata = {
+  title: "Home | Ecom store",
+};
+
 export default function Home({
   searchParams,
 }: {

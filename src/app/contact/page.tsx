@@ -1,7 +1,11 @@
 import ContactForm from "@/components/ContactForm";
-import { Toaster } from "@/components/ui/toaster";
 
 import Section from "@/components/Section";
+
+// I want to add a title in head (meta title)
+export const metadata = {
+  title: "Contact us | Ecom store",
+};
 
 export default function Contact() {
   return (
@@ -10,8 +14,6 @@ export default function Contact() {
         Contact us
       </h1>
       <ContactForm />
-      {/* Toaster is used to display success messages on form submission */}
-      <Toaster />
     </Section>
   );
 }

@@ -6,7 +6,7 @@ export default function Price({
   discountedPrice: number;
 }) {
   return (
-    <div>
+    <div className="">
       {discountedPrice < price ? (
         <div className="flex flex-col  ">
           <span className="line-through text-sm text-gray-500">
@@ -15,7 +15,10 @@ export default function Price({
           <span className="text-sm  font-semibold">{discountedPrice} NOK</span>
         </div>
       ) : (
-        <div className="text-sm  font-semibold">{price} NOK</div>
+        <>
+          <div className="h-5"></div>
+          <div className="text-sm  font-semibold ">{price} NOK</div>
+        </>
       )}
     </div>
   );
